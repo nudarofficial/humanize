@@ -13,3 +13,6 @@ Thumbs.db
 # Local drafts made while testing the checker
 draft*.txt
 *.local.md
+
+# Build output (humanize.zip is attached to each GitHub release)
+dist/

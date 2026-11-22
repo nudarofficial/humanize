@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # check_patterns.py: flags AI-writing tells listed on Wikipedia's Signs of AI writing page (November 2026).
 # Part of the humanize skill. Copyright (c) 2026 nudarofficial. MIT License, see LICENSE.
 # Usage: python3 check_patterns.py draft.txt   (or pipe text in). Exits 1 if anything is flagged.

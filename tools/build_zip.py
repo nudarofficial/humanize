@@ -1,8 +1,9 @@
-# Rebuilds dist/humanize.zip from skills/humanize. Copyright (c) 2026 nudarofficial. MIT License, see LICENSE.
-# Usage, from the repository root: python3 tools/build_zip.py .
+# Builds dist/humanize.zip from skills/humanize (attached to each GitHub release). Copyright (c) 2026 nudarofficial. MIT License, see LICENSE.
+# Usage, from the repository root: python3 tools/build_zip.py . [output.zip]
 import sys, zipfile
 from pathlib import Path
-root = Path(sys.argv[1]); skill = root / 'skills' / 'humanize'; out = root / 'dist' / 'humanize.zip'
+root = Path(sys.argv[1]); skill = root / 'skills' / 'humanize'; out = Path(sys.argv[2]) if len(sys.argv) > 2 else root / 'dist' / 'humanize.zip'
+out.parent.mkdir(parents=True, exist_ok=True)
 with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
     for p in sorted(skill.rglob('*')):
         if p.is_file() and '__pycache__' not in p.parts:

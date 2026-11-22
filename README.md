@@ -166,9 +166,8 @@ humanize/
 │   │   └── patterns.md       # full pattern catalog from Wikipedia's guide
 │   └── scripts/
 │       └── check_patterns.py # pattern checker (Python 3, no dependencies)
-├── dist/humanize.zip         # upload package for the Claude apps
 ├── tests/                    # unit tests, test cases and fixtures
-├── tools/build_zip.py        # rebuilds dist/humanize.zip
+├── tools/build_zip.py        # builds humanize.zip for each release
 ├── docs/                     # project page (GitHub Pages), llms.txt and sitemap
 ├── assets/                   # social preview, logo and screenshots
 ├── CHANGELOG.md

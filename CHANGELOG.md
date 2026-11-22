@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- humanize.zip is no longer kept in the repository; a workflow builds it and attaches it to each GitHub release.
+- Removed the shebang line from check_patterns.py; run it with python3 as documented.
+
 ## 1.1.1 (22 November 2026)
 
 - The skill folder, and so humanize.zip, now includes the LICENSE file, so the MIT notice and the CC BY-SA 4.0 attribution travel with every copy.

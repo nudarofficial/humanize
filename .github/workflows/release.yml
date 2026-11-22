@@ -1,0 +1,20 @@
+# Builds humanize.zip and attaches it to each published release.
+# Copyright (c) 2026 nudarofficial. MIT License, see LICENSE.
+name: release-zip
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/build_zip.py . dist/humanize.zip
+      - run: gh release upload "${{ github.event.release.tag_name }}" dist/humanize.zip --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}

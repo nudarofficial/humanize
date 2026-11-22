@@ -102,12 +102,17 @@ class ModeTests(unittest.TestCase):
 
 class SkillFileTests(unittest.TestCase):
     def test_zip_matches_skill_folder(self):
-        import zipfile
-        with zipfile.ZipFile(ROOT / 'dist' / 'humanize.zip') as z:
-            packed = {n: z.read(n) for n in z.namelist()}
+        import subprocess, sys, tempfile, zipfile
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / 'humanize.zip'
+            subprocess.run([sys.executable, str(ROOT / 'tools' / 'build_zip.py'), str(ROOT), str(out)], check=True, capture_output=True)
+            with zipfile.ZipFile(out) as z:
+                packed = {n: z.read(n) for n in z.namelist()}
         disk = {'humanize/' + p.relative_to(SKILL).as_posix(): p.read_bytes()
                 for p in SKILL.rglob('*') if p.is_file() and '__pycache__' not in p.parts}
-        self.assertEqual(packed, disk, 'dist/humanize.zip is out of date; rebuild it')
+        self.assertEqual(packed, disk)
+        self.assertIn('humanize/LICENSE', packed)
+        self.assertIn('humanize/SKILL.md', packed)
 
     def test_frontmatter(self):
         text = (SKILL / 'SKILL.md').read_text(encoding='utf-8')
