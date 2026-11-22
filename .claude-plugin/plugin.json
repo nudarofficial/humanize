@@ -1,0 +1,25 @@
+{
+  "name": "humanize",
+  "version": "1.1.1",
+  "description": "Agent Skill that rewrites robotic, AI-generated text into natural human writing without changing the facts, based on Wikipedia's Signs of AI writing guide.",
+  "author": {
+    "name": "nudarofficial",
+    "url": "https://github.com/nudarofficial"
+  },
+  "homepage": "https://github.com/nudarofficial/humanize",
+  "repository": "https://github.com/nudarofficial/humanize",
+  "license": "MIT AND CC-BY-SA-4.0",
+  "keywords": [
+    "humanize",
+    "ai-humanizer",
+    "humanize-ai-text",
+    "writing",
+    "editing",
+    "agent-skills",
+    "claude-skills"
+  ],
+  "icon": ".claude-plugin/icon.png",
+  "supportUrl": "https://github.com/nudarofficial/humanize/issues",
+  "documentationUrl": "https://nudarofficial.github.io/humanize/",
+  "privacyPolicyUrl": "https://github.com/nudarofficial/humanize/blob/main/PRIVACY.md"
+}
