@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humanize growth dashboard</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+body{font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;max-width:900px;margin:0 auto;padding:28px 18px;color:#1d1f24;background:#fff}
+h1{font-size:1.6rem;margin:0 0 4px} .sub{color:#5b6070;margin:0 0 22px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
+.tile{border:1px solid #e3e6ec;border-radius:10px;padding:14px 16px}
+.tile .n{font-size:1.8rem;font-weight:700;font-variant-numeric:tabular-nums} .tile .l{color:#5b6070;font-size:.9rem}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.95rem}
+th,td{text-align:right;padding:6px 8px;border-bottom:1px solid #eef0f4} th:first-child,td:first-child{text-align:left}
+th{color:#5b6070;font-weight:600} a{color:#1a56db} .note{color:#5b6070;font-size:.9rem;margin-top:18px}
+</style>
+</head>
+<body>
+<h1>Humanize growth</h1>
+<p class="sub">Live numbers from the public GitHub API for <a href="https://github.com/nudarofficial/humanize">nudarofficial/humanize</a>. History is recorded daily by a GitHub Action.</p>
+<div class="tiles" id="tiles"><div class="tile"><div class="n">…</div><div class="l">Loading</div></div></div>
+<h2>Daily history</h2>
+<table id="history"><thead><tr><th>Date</th><th>Stars</th><th>Forks</th><th>Watchers</th><th>ZIP downloads</th><th>Views (14 days)</th><th>Clones (14 days)</th></tr></thead><tbody><tr><td colspan="7">Loading</td></tr></tbody></table>
+<p class="note">Other sources: <a href="https://github.com/nudarofficial/humanize/graphs/traffic">GitHub traffic</a> (owner only), <a href="https://www.agensi.io/skills/humanize-ai-text-humanizer-built-on-wikipedia-s-ai-signs">Agensi listing</a>, <a href="https://skills.sh">skills.sh</a> installs once listed, and Google Search Console.</p>
+<script>
+const REPO = 'nudarofficial/humanize';
+const fmt = n => (n === '' || n == null) ? '–' : Number(n).toLocaleString('en');
+async function live() {
+  const [info, releases] = await Promise.all([
+    fetch(`https://api.github.com/repos/${REPO}`).then(r => r.json()),
+    fetch(`https://api.github.com/repos/${REPO}/releases?per_page=100`).then(r => r.json())
+  ]);
+  const downloads = Array.isArray(releases) ? releases.flatMap(r => r.assets || []).reduce((s, a) => s + (a.download_count || 0), 0) : '';
+  const latest = Array.isArray(releases) && releases[0] ? releases[0].tag_name : '–';
+  const tiles = [['Stars', info.stargazers_count], ['Forks', info.forks_count], ['Watchers', info.subscribers_count], ['ZIP downloads', downloads], ['Open issues', info.open_issues_count], ['Latest release', latest]];
+  document.getElementById('tiles').innerHTML = tiles.map(([l, n]) => `<div class="tile"><div class="n">${typeof n === 'number' ? fmt(n) : (n || '–')}</div><div class="l">${l}</div></div>`).join('');
+}
+async function history() {
+  const body = document.querySelector('#history tbody');
+  try {
+    const text = await fetch(`https://raw.githubusercontent.com/${REPO}/stats/stats.csv`, {cache: 'no-store'}).then(r => { if (!r.ok) throw 0; return r.text(); });
+    const [head, ...rows] = text.trim().split('\n').map(l => l.split(','));
+    const idx = k => head.indexOf(k);
+    body.innerHTML = rows.reverse().map(r => `<tr><td>${r[idx('date')]}</td>${['stars','forks','watchers','zip_downloads','views_14d','clones_14d'].map(k => `<td>${fmt(r[idx(k)])}</td>`).join('')}</tr>`).join('');
+  } catch (e) { body.innerHTML = '<tr><td colspan="7">No history yet. The first row is recorded after the daily job runs.</td></tr>'; }
+}
+live().catch(() => { document.getElementById('tiles').innerHTML = '<div class="tile"><div class="l">GitHub API unavailable right now</div></div>'; });
+history();
+</script>
+</body>
+</html>

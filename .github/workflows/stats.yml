@@ -1,0 +1,43 @@
+# Records daily repository stats on the `stats` branch and opens an issue at each star milestone.
+# Copyright (c) 2026 nudarofficial. MIT License, see LICENSE.
+name: growth-stats
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch the stats branch
+        run: |
+          git fetch origin stats:stats 2>/dev/null && git show stats:stats.csv > "$RUNNER_TEMP/stats.csv" || true
+      - name: Collect
+        id: collect
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/collect_stats.py "${{ github.repository }}" "$RUNNER_TEMP/stats.csv"
+      - name: Save to the stats branch
+        run: |
+          mkdir -p "$RUNNER_TEMP/out" && cd "$RUNNER_TEMP/out"
+          git init -q -b stats
+          git config user.name "nudarofficial"
+          git config user.email "nudarofficial@users.noreply.github.com"
+          cp "$RUNNER_TEMP/stats.csv" stats.csv
+          git add stats.csv && git commit -q -m "Stats for $(date -u +%F)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" stats
+      - name: Announce a milestone
+        if: steps.collect.outputs.milestone != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "${{ github.repository }}" \
+            --title "Milestone: ${{ steps.collect.outputs.milestone }} stars" \
+            --body "Humanize reached ${{ steps.collect.outputs.stars }} stars. Growth dashboard: https://nudarofficial.github.io/humanize/growth.html"
