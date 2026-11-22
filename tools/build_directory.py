@@ -17,6 +17,7 @@ shutil.copytree(root / '.claude-plugin', out / '.claude-plugin')
 shutil.copytree(root / 'skills', out / 'skills',
                 ignore=shutil.ignore_patterns('scripts', '__pycache__', '*.py', '*.pyc'))
 shutil.copy2(root / 'LICENSE', out / 'LICENSE')
+shutil.copy2(root / 'PRIVACY.md', out / 'PRIVACY.md')
 
 def absolute(m):
     label, url = m.group(1), m.group(2)

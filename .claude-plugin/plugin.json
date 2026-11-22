@@ -18,5 +18,8 @@
     "agent-skills",
     "claude-skills"
   ],
-  "icon": ".claude-plugin/icon.png"
+  "icon": ".claude-plugin/icon.png",
+  "supportUrl": "https://github.com/nudarofficial/humanize/issues",
+  "documentationUrl": "https://nudarofficial.github.io/humanize/",
+  "privacyPolicyUrl": "https://github.com/nudarofficial/humanize/blob/main/PRIVACY.md"
 }
