@@ -4,6 +4,7 @@
 
 [![tests](https://github.com/nudarofficial/humanize/actions/workflows/tests.yml/badge.svg)](https://github.com/nudarofficial/humanize/actions/workflows/tests.yml)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/nudarofficial/humanize)](https://github.com/nudarofficial/humanize/releases/latest)
 [![Text: CC BY-SA 4.0](https://img.shields.io/badge/text-CC%20BY--SA%204.0-lightgrey.svg)](LICENSE)
 
 humanize is an open-source Claude Agent Skill that rewrites robotic, AI-generated writing into natural human writing without changing the facts or the meaning. It follows Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) guide as it stood in November 2026, works in Claude Code, claude.ai and other agents that read `SKILL.md` files, and comes with a small Python checker that flags AI writing patterns in a draft.
@@ -24,6 +25,7 @@ Project page: [nudarofficial.github.io/humanize](https://nudarofficial.github.io
 - [Testing](#testing)
 - [FAQ](#faq)
 - [Sources](#sources)
+- [Feedback](#feedback)
 - [License](#license)
 
 ## Example
@@ -71,7 +73,7 @@ To use it in a single project only, copy the folder to `.claude/skills/humanize`
 
 ### Claude apps (claude.ai, desktop, mobile)
 
-1. Download [`dist/humanize.zip`](dist/humanize.zip). It holds the `humanize` skill folder at its root, which is the layout Claude expects.
+1. Download `humanize.zip` from the [latest release](https://github.com/nudarofficial/humanize/releases/latest/download/humanize.zip). It holds the `humanize` skill folder at its root, which is the layout Claude expects.
 2. In Claude, open Customize > Skills, click the + button, choose Create skill, then Upload a skill, and pick the ZIP.
 3. Turn the skill on. Skills need code execution enabled; on Team and Enterprise plans an owner may have to allow skills first.
 
@@ -220,6 +222,10 @@ It was built from Wikipedia's guide as read on 22 November 2026, including its S
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), its [Style](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing/Style) and [Markup](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing/Markup) subpages, by Wikipedia contributors and [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup), licensed under CC BY-SA 4.0.
 - [Agent Skills specification](https://agentskills.io/specification).
+
+## Feedback
+
+Questions, ideas and before-and-after examples go in [Discussions](https://github.com/nudarofficial/humanize/discussions). Bugs and missed patterns go in [Issues](https://github.com/nudarofficial/humanize/issues). If Humanize saves you editing time, a star helps other people find it.
 
 ## License
 
