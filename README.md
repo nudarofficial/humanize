@@ -154,7 +154,10 @@ humanize/
 │   ├── marketplace.json      # lets Claude Code install the repo as a plugin
 │   └── plugin.json
 ├── skills/humanize/          # the skill itself
-│   ├── SKILL.md              # workflow, modes and rules
+│   ├── SKILL.md              # workflow, modes, output format and rules
+│   ├── README.md             # short overview for people browsing the skill
+│   ├── examples/
+│   │   └── examples.md       # finished rewrites and a review, English and Arabic
 │   ├── references/
 │   │   └── patterns.md       # full pattern catalog from Wikipedia's guide
 │   └── scripts/

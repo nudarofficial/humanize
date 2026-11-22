@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 (22 November 2026)
+
+- Trigger-based skill description ("Use when asked to...") that fits claude.ai's 200-character limit.
+- New output format section for the rewrite, write and review modes.
+- New examples/examples.md with finished rewrites and a review in English and Arabic, generated from the tested cases.
+- README.md inside the skill folder, for marketplaces that show the skill on its own.
+
 ## 1.0.0 (22 November 2026)
 
 First public release.

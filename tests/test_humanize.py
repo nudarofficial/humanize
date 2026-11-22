@@ -124,12 +124,20 @@ class SkillFileTests(unittest.TestCase):
 
     def test_referenced_files_exist(self):
         text = (SKILL / 'SKILL.md').read_text(encoding='utf-8')
-        for ref in ('references/patterns.md', 'scripts/check_patterns.py'):
+        for ref in ('references/patterns.md', 'scripts/check_patterns.py', 'examples/examples.md'):
             self.assertIn(ref, text)
             self.assertTrue((SKILL / ref).exists(), ref)
 
+    def test_examples_match_tested_cases(self):
+        text = (SKILL / 'examples' / 'examples.md').read_text(encoding='utf-8')
+        for case in CASES:
+            if case['mode'] in ('rewrite', 'write'):
+                for line in case['output'].split(chr(10)):
+                    if line.strip():
+                        self.assertIn(line, text, case['id'])
+
     def test_skill_prose_has_no_em_dash_or_curly_quotes(self):
-        for path in (SKILL / 'SKILL.md', SKILL / 'references' / 'patterns.md', ROOT / 'README.md'):
+        for path in (SKILL / 'SKILL.md', SKILL / 'README.md', SKILL / 'references' / 'patterns.md', ROOT / 'README.md'):
             if path.exists():
                 text = path.read_text(encoding='utf-8')
                 for ch in ('—', '‘', '’', '“', '”'):

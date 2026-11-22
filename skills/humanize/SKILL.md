@@ -1,10 +1,10 @@
 ---
 name: humanize
-description: Rewrites robotic, AI-generated text into natural human writing without changing the facts. Use to humanize AI text, polish drafts, or check whether writing sounds AI-generated.
+description: Use when asked to humanize AI text, make writing sound natural or less like ChatGPT, rewrite or polish a draft, or check if text sounds AI-generated. Keeps every fact.
 license: Instructions and references CC-BY-SA-4.0; scripts MIT. See LICENSE.
 metadata:
   author: nudarofficial
-  version: "1.0.0"
+  version: "1.1.0"
   repository: https://github.com/nudarofficial/humanize
 ---
 
@@ -16,6 +16,7 @@ Files in this skill:
 
 - references/patterns.md is the full pattern catalog. Read it when rewriting or reviewing anything longer than a short paragraph, or when you're unsure whether something counts.
 - scripts/check_patterns.py flags the surface patterns in a draft. It needs Python 3 and nothing else.
+- examples/examples.md shows finished rewrites and a review in English and Arabic. Read it when you want to see the expected output.
 
 ## Why it works this way
 
@@ -38,6 +39,12 @@ Rewrite (the user gives you text):
 Write (new text): the same process without steps 1 and 2, though the ban on invented facts still applies. Write plainly from the start and run the checker on anything over about 150 words. For quick chat replies, keep the patterns in mind and skip the script.
 
 Review ("does this sound like AI?"): quote the specific phrases that match the catalog and say how strong each signal is. A cluster of signs is strong evidence; one sign alone is weak, since people write all of these sometimes. Don't rewrite unless asked, and never claim certainty. The page cites studies showing people are poor at telling AI text from human text, and detectors have real error rates.
+
+## Output format
+
+Rewrite and Write: return only the finished text, in the same format as the input (an email stays an email, Markdown stays Markdown). If a fact was missing or a claim needs a source, add one short line after the text that says so. Add no preamble and no list of changes unless the user asks.
+
+Review: list each problem as a bullet in this form: the quoted phrase, then the pattern it matches, then how strong the signal is (strong, medium or weak). After the list, give a one-sentence overall read, for example "Several strong signs; this reads as AI-assisted." If you find nothing, say so plainly.
 
 ## Default voice
 
