@@ -4,7 +4,7 @@ description: Use when asked to humanize AI text, make writing sound natural or l
 license: Instructions and references CC-BY-SA-4.0; scripts MIT. See LICENSE.
 metadata:
   author: nudarofficial
-  version: "1.1.0"
+  version: "1.1.1"
   repository: https://github.com/nudarofficial/humanize
 ---
 

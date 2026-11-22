@@ -1,6 +1,6 @@
 {
   "name": "humanize",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Agent Skill that rewrites robotic, AI-generated text into natural human writing without changing the facts, based on Wikipedia's Signs of AI writing guide.",
   "author": {
     "name": "nudarofficial",

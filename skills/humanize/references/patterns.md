@@ -1,6 +1,6 @@
 # Pattern catalog
 
-Source: Wikipedia, "Signs of AI writing" (WP:AISIGNS) and its Style and Markup subpages, by Wikipedia contributors and WikiProject AI Cleanup, read in full on 22 November 2026. https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing . This file adapts that material and is shared under CC BY-SA 4.0 (see LICENSE in the repository root).
+Source: Wikipedia, "Signs of AI writing" (WP:AISIGNS) and its Style and Markup subpages, by Wikipedia contributors and WikiProject AI Cleanup, read in full on 22 November 2026. https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing . This file adapts that material and is shared under CC BY-SA 4.0 (see LICENSE). Adaptation copyright © 2026 nudarofficial.
 
 Contents: Content, Language, Style and formatting, Talking to the user inside the deliverable, Sources citations and links, Messages replies and change notes, Hooks in social copy, Older signs, Not reliable signs, Wikipedia only.
 

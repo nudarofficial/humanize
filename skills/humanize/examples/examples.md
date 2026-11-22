@@ -1,6 +1,6 @@
 # Examples
 
-Finished results that follow this skill. Each rewrite keeps every fact from its input. The same pairs are checked by the repository's test suite.
+Finished results that follow this skill. Each rewrite keeps every fact from its input. The same pairs are checked by the repository's test suite. Copyright © 2026 nudarofficial, CC BY-SA 4.0 (see LICENSE).
 
 ## Rewrite: formal paragraph (English)
 

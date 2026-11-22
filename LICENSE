@@ -1,12 +1,15 @@
 humanize
 Copyright © 2026 nudarofficial
 
-This repository contains two kinds of material, released under two licenses.
+This project contains two kinds of material, released under two licenses.
+An identical copy of this file ships inside the skill folder
+(skills/humanize/LICENSE), so the license travels with humanize.zip.
 
 
 1. Code: MIT License
 
-Applies to: skills/humanize/scripts/, tests/, tools/, .github/ and .claude-plugin/.
+Applies to: skills/humanize/scripts/ (scripts/ inside humanize.zip), tests/,
+tools/, .github/ and .claude-plugin/.
 
 Copyright © 2026 nudarofficial
 
@@ -31,8 +34,9 @@ SOFTWARE.
 
 2. Skill text and documentation: CC BY-SA 4.0
 
-Applies to: skills/humanize/SKILL.md, skills/humanize/references/, README.md,
-CHANGELOG.md, assets/ and dist/humanize.zip (which packages the skill folder).
+Applies to: skills/humanize/SKILL.md, skills/humanize/README.md,
+skills/humanize/references/ and skills/humanize/examples/ (the same files inside
+humanize.zip), plus README.md, CHANGELOG.md, assets/ and docs/.
 
 Copyright © 2026 nudarofficial. Licensed under the Creative Commons
 Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).

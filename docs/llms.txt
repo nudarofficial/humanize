@@ -4,7 +4,7 @@
 
 Humanize has three modes: rewrite (humanize an existing draft), write (new text from given facts) and review (quote the phrases that read as AI-generated, with the pattern and signal strength). It keeps every fact, number and name, never invents sources, and makes no promise about AI detectors. English has full support; Arabic and other languages get the language-independent rules.
 
-Install: `npx skills add nudarofficial/humanize`, or in Claude Code `/plugin marketplace add nudarofficial/humanize` then `/plugin install humanize@humanize`, or upload dist/humanize.zip in the Claude apps.
+Install: `npx skills add nudarofficial/humanize`, or in Claude Code `/plugin marketplace add nudarofficial/humanize` then `/plugin install humanize@humanize`, or upload humanize.zip from the latest release (https://github.com/nudarofficial/humanize/releases/latest) in the Claude apps. Also listed free on Agensi: https://www.agensi.io/skills/humanize-ai-text-humanizer-built-on-wikipedia-s-ai-signs
 
 ## Docs
 

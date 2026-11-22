@@ -18,5 +18,6 @@ Files:
 Languages: full support for English. Other languages, Arabic included, get the language-independent rules (keeping facts, cutting inflated claims, removing chatbot leftovers and formatting habits).
 
 Source code, tests and issues: https://github.com/nudarofficial/humanize
+Also listed on Agensi: https://www.agensi.io/skills/humanize-ai-text-humanizer-built-on-wikipedia-s-ai-signs
 
-Copyright © 2026 nudarofficial. Skill text and references are licensed CC BY-SA 4.0 (adapted from Wikipedia, CC BY-SA 4.0); the script is MIT. See the LICENSE file in the repository.
+Copyright © 2026 nudarofficial. Skill text and references are licensed CC BY-SA 4.0 (adapted from Wikipedia, CC BY-SA 4.0); the script is MIT. See the LICENSE file in this folder.

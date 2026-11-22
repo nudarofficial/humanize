@@ -128,6 +128,9 @@ class SkillFileTests(unittest.TestCase):
             self.assertIn(ref, text)
             self.assertTrue((SKILL / ref).exists(), ref)
 
+    def test_license_ships_with_skill(self):
+        self.assertEqual((SKILL / 'LICENSE').read_text(encoding='utf-8'), (ROOT / 'LICENSE').read_text(encoding='utf-8'))
+
     def test_examples_match_tested_cases(self):
         text = (SKILL / 'examples' / 'examples.md').read_text(encoding='utf-8')
         for case in CASES:

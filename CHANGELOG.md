@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 (22 November 2026)
+
+- The skill folder, and so humanize.zip, now includes the LICENSE file, so the MIT notice and the CC BY-SA 4.0 attribution travel with every copy.
+- Copyright lines on the bundled pattern catalog and examples.
+- Agensi listing link in the skill README.
+
 ## 1.1.0 (22 November 2026)
 
 - Trigger-based skill description ("Use when asked to...") that fits claude.ai's 200-character limit.
