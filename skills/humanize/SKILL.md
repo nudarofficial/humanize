@@ -15,7 +15,7 @@ The rules come from Wikipedia's "Signs of AI writing" advice page (WP:AISIGNS, k
 Files in this skill:
 
 - references/patterns.md is the full pattern catalog. Read it when rewriting or reviewing anything longer than a short paragraph, or when you're unsure whether something counts.
-- scripts/check_patterns.py flags the surface patterns in a draft. It needs Python 3 and nothing else.
+- scripts/check_patterns.py flags the surface patterns in a draft. It needs Python 3 and nothing else. It's optional, and some editions (such as the Claude directory one) leave it out; it's always at https://github.com/nudarofficial/humanize.
 - examples/examples.md shows finished rewrites and a review in English and Arabic. Read it when you want to see the expected output.
 
 ## Why it works this way
@@ -33,7 +33,7 @@ Rewrite (the user gives you text):
 1. Read for meaning first. Note the point, the audience, the register, and every fact, number, name and claim. All of them stay.
 2. Add nothing the author didn't supply: no facts, numbers, quotes, sources or examples. If a vague passage needs a detail you don't have, keep it modest and mention the gap in one line after the text, or ask.
 3. Rewrite in plain, specific language in the author's voice. If the user has shared a sample of their writing, copy its sentence length, contractions, punctuation habits and vocabulary. Otherwise follow the default voice below.
-4. Check. If you can run code, save the draft to a file and run `python3 scripts/check_patterns.py draft.txt` from this skill's directory. Fix every hit or confirm it's legitimate (a quotation, a name, a literal use like a landscape photo, a real list of three things). Then reread for what a script can't see: inflated significance, vague attribution, synonym cycling, a wrap-up ending, lists rounded up to three, and a sentence rhythm that never changes.
+4. Check. If you can run code and scripts/check_patterns.py is present, save the draft to a file and run `python3 scripts/check_patterns.py draft.txt` from this skill's directory. Fix every hit or confirm it's legitimate (a quotation, a name, a literal use like a landscape photo, a real list of three things). Then reread for what a script can't see: inflated significance, vague attribution, synonym cycling, a wrap-up ending, lists rounded up to three, and a sentence rhythm that never changes.
 5. Deliver the text without commentary on what you changed. If the user asks what changed, name the actual edits ("cut the last paragraph", "swapped 'utilize' for 'use'"). Canned change notes like "refined the tone and improved flow while preserving your voice" are one of the listed tells.
 
 Write (new text): the same process without steps 1 and 2, though the ban on invented facts still applies. Write plainly from the start and run the checker on anything over about 150 words. For quick chat replies, keep the patterns in mind and skip the script.

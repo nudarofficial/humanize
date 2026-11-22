@@ -17,5 +17,6 @@
     "editing",
     "agent-skills",
     "claude-skills"
-  ]
+  ],
+  "icon": ".claude-plugin/icon.png"
 }

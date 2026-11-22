@@ -3,6 +3,8 @@
 ## Unreleased
 
 - humanize.zip is no longer kept in the repository; a workflow builds it and attaches it to each GitHub release.
+- A plugin icon, and a `directory` branch with a plugin-only edition for the Claude directory, built automatically from main.
+- SKILL.md treats the checker script as optional when it isn't bundled.
 - Removed the shebang line from check_patterns.py; run it with python3 as documented.
 
 ## 1.1.1 (22 November 2026)
