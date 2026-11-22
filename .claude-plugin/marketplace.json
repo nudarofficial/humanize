@@ -1,0 +1,14 @@
+{
+  "name": "humanize",
+  "owner": {
+    "name": "nudarofficial",
+    "url": "https://github.com/nudarofficial"
+  },
+  "plugins": [
+    {
+      "name": "humanize",
+      "source": "./",
+      "description": "Rewrites robotic, AI-generated text into natural human writing without changing the facts."
+    }
+  ]
+}

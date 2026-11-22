@@ -1,0 +1,56 @@
+humanize
+Copyright © 2026 nudarofficial
+
+This repository contains two kinds of material, released under two licenses.
+
+
+1. Code: MIT License
+
+Applies to: skills/humanize/scripts/, tests/, tools/, .github/ and .claude-plugin/.
+
+Copyright © 2026 nudarofficial
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+2. Skill text and documentation: CC BY-SA 4.0
+
+Applies to: skills/humanize/SKILL.md, skills/humanize/references/, README.md,
+CHANGELOG.md, assets/ and dist/humanize.zip (which packages the skill folder).
+
+Copyright © 2026 nudarofficial. Licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
+Full legal text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Third-party material: the skill text and pattern catalog adapt content from the
+Wikipedia project page "Wikipedia:Signs of AI writing" and its Style and Markup
+subpages, written by Wikipedia contributors (WikiProject AI Cleanup) and
+licensed under CC BY-SA 4.0:
+https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+The material was read on 22 November 2026, then reorganized, condensed and
+rewritten as writing instructions, with an added workflow, voice guidance and
+examples. Because the source is CC BY-SA 4.0, these adapted files are shared
+under the same license.
+
+
+Trademarks
+
+Claude is a trademark of Anthropic, PBC. Wikipedia is a trademark of the
+Wikimedia Foundation. This project is independent and is not affiliated with,
+sponsored by or endorsed by Anthropic or the Wikimedia Foundation.

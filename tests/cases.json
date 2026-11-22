@@ -1,0 +1,140 @@
+[
+  {
+    "id": "en-rewrite-casual-post",
+    "mode": "rewrite",
+    "language": "en",
+    "style": "casual social post",
+    "input": "I’m thrilled to share that I’ve completed the Adobe Digital Marketing certificate — a pivotal milestone in my journey. 🚀\n\nThis program wasn't just about tools; it was about mindset. It underscored the importance of data-driven storytelling, highlighting how brands can foster meaningful connections. Additionally, I gained valuable insights into SEO, social media, and analytics.\n\n- **Strategy:** Learning to align content with audience needs.\n- **Analytics:** Turning data into decisions.\n\nDespite its challenges, this journey has been transformative. Here's the thing: marketing is no longer about reach. It's about resonance, rather than raw numbers.\n\nIn conclusion, I hope this helps anyone considering the course! Let me know if you'd like a more detailed breakdown.",
+    "output": "I finished the Adobe Digital Marketing certificate.\n\nIt covered SEO, social media and analytics. The part that stuck with me is using data to decide which story to tell, and how brands build real connections with people. It wasn't easy in places.\n\nThe biggest shift in how I think is about reach. It's the first number everyone checks, and on its own it says very little about whether anyone cared. Resonance is what I'm trying to measure now.\n\nIf you're thinking about taking it, message me and I'll tell you more.",
+    "required_facts": [
+      "Adobe Digital Marketing certificate",
+      "SEO",
+      "social media",
+      "analytics",
+      "reach",
+      "Resonance"
+    ]
+  },
+  {
+    "id": "en-rewrite-formal-paragraph",
+    "mode": "rewrite",
+    "language": "en",
+    "style": "formal informational",
+    "input": "The Burj Khalifa, standing at 828 metres, serves as a testament to Dubai's ambitious vision, symbolizing its rapid transformation. Completed in 2010, it plays a pivotal role in the city's tourism landscape, attracting millions of visitors annually.",
+    "output": "The Burj Khalifa is 828 metres tall and was completed in 2010. It is a major part of Dubai's tourism and draws millions of visitors each year.",
+    "required_facts": [
+      "Burj Khalifa",
+      "828 metres",
+      "2010",
+      "Dubai",
+      "millions of visitors"
+    ]
+  },
+  {
+    "id": "en-rewrite-marketing-copy",
+    "mode": "rewrite",
+    "language": "en",
+    "style": "marketing copy",
+    "input": "Introducing AstroLens — a game-changing app that seamlessly unlocks the wonders of the night sky! With over 10,000 stars in its catalog and offline mode, AstroLens elevates your stargazing experience.",
+    "output": "More than 10,000 stars, no signal needed. AstroLens is a stargazing app with a star catalog that works offline.",
+    "required_facts": [
+      "AstroLens",
+      "10,000",
+      "offline"
+    ]
+  },
+  {
+    "id": "en-rewrite-email",
+    "mode": "rewrite",
+    "language": "en",
+    "style": "professional email",
+    "input": "I hope this email finds you well. I wanted to reach out to delve into the possibility of collaborating on the Ramadan campaign. Please let me know if you'd like a more detailed breakdown. Certainly, I'm happy to help with any questions.",
+    "output": "Hi,\n\nI'd like to talk about working together on the Ramadan campaign. Can we find a time this week or next? I can send a fuller plan before we speak, and I'm glad to answer questions in the meantime.",
+    "required_facts": [
+      "Ramadan campaign"
+    ]
+  },
+  {
+    "id": "en-write-caption-from-facts",
+    "mode": "write",
+    "language": "en",
+    "style": "social caption",
+    "input": "Write an Instagram caption for my astronomy page. Photo: Saturn through my 8-inch Dobsonian from Al Qudra, 20 November. Keep it short.",
+    "output": "Saturn from Al Qudra on 20 November, through my 8-inch Dobsonian.\n\nWhich planet should I point it at next?",
+    "required_facts": [
+      "Saturn",
+      "Al Qudra",
+      "20 November",
+      "8-inch Dobsonian"
+    ]
+  },
+  {
+    "id": "ar-rewrite-social-post",
+    "mode": "rewrite",
+    "language": "ar",
+    "style": "Arabic social post",
+    "input": "يسعدني أن أعلن — بكل فخر — عن إطلاق منصة سراج في ١٥ يناير ٢٠٢٧، والتي تُعد علامة فارقة في مجال الذكاء الاصطناعي 🚀\n\n- **المحتوى:** تضم المنصة ٣ دورات: التسويق الرقمي، والتصميم، وتحليل البيانات.\n\nباختصار، هذه رحلة ملهمة نحو مستقبل [اسم الشركة].",
+    "output": "أطلقنا منصة سراج في ١٥ يناير ٢٠٢٧، وهي منصة في مجال الذكاء الاصطناعي. فيها ٣ دورات: التسويق الرقمي، والتصميم، وتحليل البيانات.",
+    "required_facts": [
+      "سراج",
+      "١٥ يناير ٢٠٢٧",
+      "٣ دورات",
+      "التسويق الرقمي",
+      "التصميم",
+      "تحليل البيانات",
+      "الذكاء الاصطناعي"
+    ]
+  },
+  {
+    "id": "ar-rewrite-formal",
+    "mode": "rewrite",
+    "language": "ar",
+    "style": "Arabic formal",
+    "input": "تُعد جامعة الشارقة، التي تأسست عام ١٩٩٧، صرحًا شامخًا يجسد الرؤية الطموحة — وتلعب دورًا محوريًا في المشهد التعليمي المتطور.",
+    "output": "تأسست جامعة الشارقة عام ١٩٩٧، ولها دور مهم في التعليم.",
+    "required_facts": [
+      "جامعة الشارقة",
+      "١٩٩٧"
+    ]
+  },
+  {
+    "id": "en-review-ai-post",
+    "mode": "review",
+    "language": "en",
+    "style": "casual social post",
+    "input_from": "en-rewrite-casual-post",
+    "expected_tags": [
+      "em-dash",
+      "emoji",
+      "curly quotes",
+      "bold-label bullet",
+      "parallelism",
+      "chatbot",
+      "summary-ending",
+      "ai-vocab: pivotal",
+      "challenges-formula",
+      "social-hook"
+    ]
+  },
+  {
+    "id": "ar-review-social-post",
+    "mode": "review",
+    "language": "ar",
+    "style": "Arabic social post",
+    "input_from": "ar-rewrite-social-post",
+    "expected_tags": [
+      "em-dash",
+      "emoji",
+      "bold-label bullet",
+      "placeholder"
+    ]
+  },
+  {
+    "id": "en-review-human-paragraph",
+    "mode": "review",
+    "language": "en",
+    "style": "plain human paragraph",
+    "fixture": "en_human_paragraph.md",
+    "expected_tags": []
+  }
+]
