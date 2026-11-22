@@ -1,0 +1,20 @@
+# Humanize
+
+> Free, open-source Agent Skill for Claude and other AI agents that rewrites robotic, AI-generated text into natural human writing without changing the facts. Based on Wikipedia's Signs of AI writing guide (November 2026). Maintained by nudarofficial.
+
+Humanize has three modes: rewrite (humanize an existing draft), write (new text from given facts) and review (quote the phrases that read as AI-generated, with the pattern and signal strength). It keeps every fact, number and name, never invents sources, and makes no promise about AI detectors. English has full support; Arabic and other languages get the language-independent rules.
+
+Install: `npx skills add nudarofficial/humanize`, or in Claude Code `/plugin marketplace add nudarofficial/humanize` then `/plugin install humanize@humanize`, or upload dist/humanize.zip in the Claude apps.
+
+## Docs
+
+- [README](https://github.com/nudarofficial/humanize#readme): features, install, usage, FAQ
+- [SKILL.md](https://github.com/nudarofficial/humanize/blob/main/skills/humanize/SKILL.md): the skill's workflow, output format and rules
+- [Pattern catalog](https://github.com/nudarofficial/humanize/blob/main/skills/humanize/references/patterns.md): every AI writing pattern the skill checks, adapted from Wikipedia
+- [Examples](https://github.com/nudarofficial/humanize/blob/main/skills/humanize/examples/examples.md): finished rewrites and a review in English and Arabic
+- [Changelog](https://github.com/nudarofficial/humanize/blob/main/CHANGELOG.md)
+
+## Optional
+
+- [Pattern checker script](https://github.com/nudarofficial/humanize/blob/main/skills/humanize/scripts/check_patterns.py): Python 3, no dependencies, no network access
+- [License](https://github.com/nudarofficial/humanize/blob/main/LICENSE): code MIT, skill text CC BY-SA 4.0 (adapted from Wikipedia), Copyright 2026 nudarofficial

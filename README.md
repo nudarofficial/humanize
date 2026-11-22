@@ -10,6 +10,8 @@ humanize is an open-source Claude Agent Skill that rewrites robotic, AI-generate
 
 Use it to humanize AI text, clean up drafts that sound like ChatGPT, or check whether a piece of writing reads as AI-generated.
 
+Project page: [nudarofficial.github.io/humanize](https://nudarofficial.github.io/humanize/)
+
 ## Contents
 
 - [Example](#example)
@@ -165,7 +167,8 @@ humanize/
 ├── dist/humanize.zip         # upload package for the Claude apps
 ├── tests/                    # unit tests, test cases and fixtures
 ├── tools/build_zip.py        # rebuilds dist/humanize.zip
-├── assets/social-preview.png
+├── docs/                     # project page (GitHub Pages), llms.txt and sitemap
+├── assets/                   # social preview, logo and screenshots
 ├── CHANGELOG.md
 └── LICENSE
 ```
